@@ -1,0 +1,681 @@
+/* Obter width total do monitor usando CSS3 */
+
+@-webkit-keyframes bounceOutRight {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes bounceOutLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Cor da letra do placeholder */
+
+::-webkit-input-placeholder {
+    color: #0A3871;
+}
+
+ :-moz-placeholder {
+    /* Firefox 18- */
+    color: #0A3871;
+}
+
+ ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #0A3871;
+}
+
+
+/* Remover borda dos inputs quando clicado */
+
+textarea:focus,
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+html {
+    position: relative;
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+body {
+    background: #D8DFE8;
+    margin: 0 auto;
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+#cabecalho {
+    margin: 40px 1240px 916px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+}
+
+.logo {
+    /* Logo */
+    width: 120px;
+    height: 48px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.botaoComecarJogar {
+    /* Button */
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    width: 317px;
+    height: 105px;
+    left: 562px;
+    top: 394px;
+    right: 561px;
+    bottom: 525px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.botaoComecarJogar input {
+    width: 269px;
+    height: 57px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* White */
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.botaoAdicionarNovaPalavra {
+    /* Button */
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    width: 317px;
+    height: 102px;
+    left: 562px;
+    top: 528px;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    background-color: #D8DFE8;
+}
+
+.botaoAdicionarNovaPalavra input {
+    /* Button */
+    width: 269px;
+    height: 57px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.digiteUmaPalavra {
+    /* Digite seu texto */
+    position: absolute;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: none;
+    top: 168px;
+    right: 540px;
+    bottom: 808px;
+    left: 240px;
+}
+
+#frame3 {
+    /* Frame 3 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 688px;
+    height: 67px;
+    left: 376px;
+    top: 701px;
+}
+
+#frame3 .salvarComecar {
+    /* Button */
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 332px;
+    height: 67px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#frame3 .salvarComecar input {
+    /* Button */
+    width: 284px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#frame3 .cancelar {
+    /* Button */
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 332px;
+    height: 67px;
+    /* Dark blue/dark-blue-300 */
+    background: #E5E5E5;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+#frame3 .cancelar input {
+    /* Button */
+    width: 284px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#frame1 {
+    /* Frame 1 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 252px;
+    height: 18px;
+    top: 667px;
+    right: 949px;
+    bottom: 339px;
+    left: 376px;
+}
+
+#frame1 .exclamacao {
+    /* bi:exclamation-circle-fill */
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#frame1 .exclamacao img {
+    /* Group */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#frame1 .p1 {
+    /* Apenas letras minúsculas e sem acento. */
+    width: 228px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    /* Gray/gray-400 */
+    color: #495057;
+    opacity: 0.8;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#keyboard {
+    /* Keyboard */
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 464px;
+    height: 152px;
+    left: 476px;
+    top: 554px;
+    right: 500px;
+    bottom: 318px;
+    margin: 0 auto;
+}
+
+#word {
+    /* Word */
+    width: 464px;
+    height: 92px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#letter {
+    /* Letter */
+    position: absolute;
+    width: 80px;
+    height: 92px;
+    top: 0px;
+}
+
+#otherLetters {
+    /* Other letters */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    height: 36px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#otherLetters .otherLetters {
+    width: 16px;
+    height: 36px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    /* identical to box height, or 36px */
+    text-align: center;
+    /* Gray/gray-400 */
+    color: #495057;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#labelLetter {
+    /* A */
+    position: absolute;
+    width: 80px;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    /* identical to box height, or 72px */
+    text-align: center;
+    color: #0A3871;
+}
+
+.retangulo {
+    /* Rectangle 6 */
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    top: 88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+#actions {
+    /* Actions */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 688px;
+    height: 67px;
+    left: 376px;
+    top: 904px;
+    right: 376px;
+    bottom: 53px;
+}
+
+#actions .novoJogo {
+    /* Button */
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 332px;
+    height: 67px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    color: #D8DFE8;
+    cursor: pointer;
+}
+
+#actions .novoJogo input {
+    /* Button */
+    width: 284px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    background: #0A3871;
+    cursor: pointer;
+    border: none
+}
+
+#actions .desistir {
+    /* Button */
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 332px;
+    height: 67px;
+    /* Dark blue/dark-blue-300 */
+    background: #D8DFE8;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+#actions .desistir input {
+    /* Button */
+    width: 284px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: none
+}
+
+#grupo5 {
+    /* Group 5 */
+    position: absolute;
+    width: 294px;
+    height: 360px;
+    left: 573px;
+    top: 88px;
+    right: 573px;
+    bottom: 576px;
+}
+
+.ellipse {
+    /* Ellipse 9 (Stroke) */
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 225px;
+    top: 133px;
+}
+
+.retangulo14 {
+    /* Rectangle 14 */
+    position: absolute;
+    width: 294px;
+    height: 5px;
+    /*left: 573px;
+    right: 573px;*/
+    bottom: 576px;
+    top: 443px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.retangulo15 {
+    /* Rectangle 15 */
+    position: absolute;
+    width: 4.5px;
+    height: 360px;
+    left: 79.67px;
+    right: 208.83px;
+    top: 88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.retangulo16 {
+    /* Rectangle 16 */
+    position: absolute;
+    width: 177.75px;
+    height: 4.5px;
+    left: 79.67px;
+    right: 173.25px;
+    top: 88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.retangulo17 {
+    /* Rectangle 17 */
+    position: absolute;
+    width: 4.5px;
+    height: 49.5px;
+    left: 255px;
+    top: 88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.retangulo18 {
+    /* Rectangle 18 */
+    position: absolute;
+    width: 4.5px;
+    height: 135px;
+    left: 255px;
+    top: 196px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+}
+
+.retangulo19 {
+    /* Rectangle 19 */
+    position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 237px;
+    top: 324.62px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+    transform: rotate(30deg);
+}
+
+.retangulo20 {
+    /* Rectangle 20 */
+    position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 273px;
+    top: 324.62px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+    transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+}
+
+.retangulo21 {
+    /* Rectangle 21 */
+    position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 273px;
+    top: 194.88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+    transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+}
+
+.retangulo22 {
+    /* Rectangle 22 */
+    position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 237px;
+    top: 194.88px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+    transform: rotate(30deg);
+}
+
+.voceVenceu {
+    font-size: 30px;
+    color: green;
+    position: absolute;
+    left: 970px;
+    top: 350px;
+    text-align: center;
+}
+
+.vocePerdeu {
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    left: 970px;
+    top: 350px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    color: #0A3871;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: 1014px;
+}
+
+footer a {
+    text-decoration: none;
+}
